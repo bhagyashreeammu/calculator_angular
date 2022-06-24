@@ -1,0 +1,39 @@
+<div class="main">
+  <form name="myForm">
+    <input #box (keyup.enter)="calcvalue(box.value)" [(ngModel)]="toshow" type="text" id="cal" name="textview"
+      class="textview" disabled><br>
+    <hr>
+  </form>
+  <table>
+    <tr>
+      <td><input class="button symbol gray" type="button" (click)="clr()" value="C"></td>
+      <td><input class="button symbol gray" type="button" (click)="back()" value="⌫"></td>
+      <td><input class="button symbol gray" type="button" (click)="insertNum('%')" value="%"></td>
+      <td><input class="button symbol blue" type="button" (click)="insertNum('/')" value="÷"></td>
+    </tr>
+    <tr>
+      <td><input class="button number gray" type="button" (click)="insertNum('7')" value="7"></td>
+      <td><input class="button number gray" type="button" (click)="insertNum('8')" value="8"></td>
+      <td><input class="button number gray" type="button" (click)="insertNum('9')" value="9"></td>
+      <td><input class="button symbol blue" type="button" (click)="insertNum('*')" value="X"></td>
+    </tr>
+    <tr>
+      <td><input class="button number gray" type="button" (click)="insertNum('4')" value="4"></td>
+      <td><input class="button number gray" type="button" (click)="insertNum('5')" value="5"></td>
+      <td><input class="button number gray" type="button" (click)="insertNum('6')" value="6"></td>
+      <td><input class="button symbol blue" type="button" (click)="insertNum('-')" value="-"></td>
+    </tr>
+    <tr>
+      <td><input class="button number gray" type="button" (click)="insertNum('1')" value="1"></td>
+      <td><input class="button number gray" type="button" (click)="insertNum('2')" value="2"></td>
+      <td><input class="button number gray" type="button" (click)="insertNum('3')" value="3"></td>
+      <td><input class="button symbol blue" type="button" (click)="insertNum('+')" value="+"></td>
+    </tr>
+    <tr>
+      <td><input class="button symbol gray" type="button" (click)="SR()" id="r" value="√"></td>
+      <td><input class="button number gray" type="button" (click)="insertNum('0')" value="0"></td>
+      <td><input class="button symbol gray" type="button" (click)="insertNum('.')" value="."></td>
+      <td><input class="button symbol blue" type="button" (click)="solve()" value="="></td>
+    </tr>
+  </table>
+</div>
